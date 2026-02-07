@@ -1,3 +1,4 @@
 a = int(input())
 b = list(map(int,input().split()))
-print(sum(b))
+for i in range(len(b)):
+    print(b[i]*b[i],end=' ')
