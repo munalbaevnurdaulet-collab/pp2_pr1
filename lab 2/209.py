@@ -1,5 +1,4 @@
-minimum = 0
-a = int(input())
+"""a = int(input())
 b = list(map(int,input().split()))
 
 max = max(b)
@@ -11,5 +10,16 @@ for i in range(a):
 print(*b)
 
 
+"""
 
+a = int(input())
+c = list()
+b = input().split()
+for i in range(a):
+    b[i] = int(b[i])
+    c.append(b[i])
+for i in range(a):
+    if c[i] == max(c):
+        c[i] = min(c)
+print(*c)
 
