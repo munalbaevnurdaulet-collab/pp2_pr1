@@ -1,9 +1,10 @@
 import re
 
-a = input()
+text = "how-tos and know-hows, 1990s and 2000, Tom and Jerry"
 
-b = re.compile(r"(cat|dog)")
-if re.search(b,a):
-    print("Yes")
-else:
-    print("No")
+a = re.compile(r"\d+s?")
+
+b = re.findall(a,text)
+
+for i in b:
+    print(i,end=' ')
