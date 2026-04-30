@@ -15,6 +15,7 @@ pygame.display.set_caption("Keyboard Music Player")
 player = MusicPlayer(screen)
 clock = pygame.time.Clock()
 
+
 # Temporary UI message (for example after pressing R)
 message = ""
 message_until = 0

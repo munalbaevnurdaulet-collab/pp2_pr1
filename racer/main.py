@@ -82,6 +82,7 @@ def draw_road():
     # draw dashed white lines on the road center, shifted by lane_offset each frame
     for y in range(-40, HEIGHT, 40):
         pygame.draw.rect(screen, WHITE, (WIDTH // 2 - 3, y + lane_offset, 6, 20))
+        print(lane_offset)
 
 
 def draw_player():
@@ -136,9 +137,9 @@ while running:
             coin_y = -random.randint(100, 400)            # random y above the screen
             coin_x = random.randint(60, WIDTH - 60)       # random x on the road
 
-        lane_offset += 6                      # shift the dashed lines down a little
+        """lane_offset += 6                      # shift the dashed lines down a little
         if lane_offset >= 40:                 # each dash is 40 px tall, so wrap after 40
-            lane_offset = 0
+            lane_offset = 0"""
 
         # check if the player collided with the enemy car → game over
         if rects_overlap(player_x, player_y, CAR_W, CAR_H,
